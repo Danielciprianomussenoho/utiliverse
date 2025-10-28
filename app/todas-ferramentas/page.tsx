@@ -15,9 +15,9 @@ export default function TodasFerramentasPage() {
   const [selectedCategory, setSelectedCategory] = useState('Todas');
   const [sortBy, setSortBy] = useState('name');
 
-  // Filtrar e ordenar ferramentas (código IGUAL)
+  // Filtrar e ordenar ferramentas
   const filteredTools = useMemo(() => {
-    let filtered = allTools.filter(tool => {
+    const filtered = allTools.filter(tool => {
       const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           tool.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'Todas' || tool.category === selectedCategory;
@@ -84,7 +84,7 @@ export default function TodasFerramentasPage() {
           <AdSense />
         </div>
 
-        {/* Sistema de Busca (código IGUAL) */}
+        {/* Sistema de Busca */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 mb-8">
           <div className="space-y-4">
             {/* Barra de Busca */}

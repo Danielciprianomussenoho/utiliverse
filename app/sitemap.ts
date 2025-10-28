@@ -3,74 +3,28 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://utiliverse.com'; // ALTERE para seu domínio
-  const currentDate = new Date();
+  const now = new Date();
 
   // URLs estáticas principais
   const staticRoutes = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/todas-ferramentas`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/tutoriais`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/sobre`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contato`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/cookies`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/privacidade`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/termos`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
+    { url: baseUrl, lastModified: now, changeFrequency: 'daily' as const, priority: 1.0 },
+    { url: `${baseUrl}/todas-ferramentas`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/tutoriais`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/sobre`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.7 },
+    { url: `${baseUrl}/contato`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.7 },
+    { url: `${baseUrl}/cookies`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/privacidade`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/termos`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 
-  // URLs dinâmicas das ferramentas (todas as 20 ferramentas)
+  // URLs dinâmicas das ferramentas
   const tools = [
-    { slug: 'imc', priority: 0.9 },
-    { slug: 'tempo', priority: 0.8 },
+    { slug: 'imc', priority: 0.95 },
     { slug: 'idade', priority: 0.9 },
     { slug: 'moedas', priority: 0.9 },
     { slug: 'porcentagem', priority: 0.9 },
-    { slug: 'contador', priority: 0.8 },
+    { slug: 'contador', priority: 0.85 },
     { slug: 'senhas', priority: 0.9 },
     { slug: 'romano', priority: 0.7 },
     { slug: 'unidades', priority: 0.8 },
@@ -85,61 +39,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'cientifica', priority: 0.8 },
     { slug: 'paleta-cores', priority: 0.7 },
     { slug: 'gradientes', priority: 0.7 },
+    { slug: 'tempo', priority: 0.8 },
   ];
 
-  const toolRoutes = tools.map((tool) => ({
+  const toolRoutes = tools.map(tool => ({
     url: `${baseUrl}/${tool.slug}`,
-    lastModified: currentDate,
+    lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: tool.priority,
   }));
 
   // URLs dinâmicas dos tutoriais
   const tutorials = [
-    { slug: 'como-usar-calculadora-imc' },
-    { slug: 'conversor-moedas-dicas' },
-    { slug: 'criando-senhas-seguras' },
-    { slug: 'guia-contador-palavras' },
-    { slug: 'calculadora-porcentagem-pratica' },
-    { slug: 'conversor-unidades-completo' },
-  ];
+    'como-usar-calculadora-imc',
+    'conversor-moedas-dicas',
+    'criando-senhas-seguras',
+    'guia-contador-palavras',
+    'calculadora-porcentagem-pratica',
+    'conversor-unidades-completo',
+  ].map(slug => ({
+    url: `${baseUrl}/tutoriais/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
 
-  const tutorialRoutes = tutorials.map((tutorial) => ({
-    url: `${baseUrl}/tutoriais/${tutorial.slug}`,
-    lastModified: currentDate,
+  // URLs dinâmicas dos posts do blog
+  const blogPosts = [
+    'como-calcular-imc',
+    'ferramentas-online-essenciais',
+    'seguranca-digital-senhas-fortes',
+    'juros-simples-compostos',
+    'conversao-temperatura',
+    'calculadora-datas',
+    'editor-texto-online',
+    'qr-codes-criativos',
+    'ferramentas-toolverse-guia',
+    'conversor-moedas-guia',
+    'calculadora-porcentagem',
+    'conversor-tempo',
+    'calculadora-idade',
+    'gerador-senhas-seguras',
+    'conversor-unidades',
+    'conversor-bases-numericas',
+    'calculadora-cientifica',
+    'gerador-paleta-cores',
+    'gerador-gradientes-css',
+  ].map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  // URLs dinâmicas dos posts do blog (todos os 20 posts)
-  const blogPosts = [
-    { slug: 'como-calcular-imc' },
-    { slug: 'ferramentas-online-essenciais' },
-    { slug: 'seguranca-digital-senhas-fortes' },
-    { slug: 'juros-simples-compostos' },
-    { slug: 'conversao-temperatura' },
-    { slug: 'calculadora-datas' },
-    { slug: 'editor-texto-online' },
-    { slug: 'qr-codes-criativos' },
-    { slug: 'ferramentas-toolverse-guia' },
-    { slug: 'conversor-moedas-guia' },
-    { slug: 'calculadora-porcentagem' },
-    { slug: 'conversor-tempo' },
-    { slug: 'calculadora-idade' },
-    { slug: 'gerador-senhas-seguras' },
-    { slug: 'conversor-unidades' },
-    { slug: 'conversor-bases-numericas' },
-    { slug: 'calculadora-cientifica' },
-    { slug: 'gerador-paleta-cores' },
-    { slug: 'gerador-gradientes-css' },
-  ];
-
-  const blogRoutes = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...toolRoutes, ...tutorialRoutes, ...blogRoutes];
+  return [...staticRoutes, ...toolRoutes, ...tutorials, ...blogPosts];
 }

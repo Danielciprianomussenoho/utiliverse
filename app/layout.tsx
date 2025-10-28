@@ -5,16 +5,16 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 
-// Otimização de fontes - subset apenas para caracteres necessários
+
 const inter = Inter({ 
   subsets: ['latin'],
-  display: 'swap', // Melhora CLS
+  display: 'swap', 
   preload: true,
   fallback: ['system-ui', 'arial'],
   variable: '--font-inter',
 });
 
-// Viewport configuration para mobile-first
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   category: 'Utilities',
   classification: 'Tools',
   
-  // Prevenção de detecção automática
+  
   formatDetection: {
     email: false,
     address: false,
@@ -204,7 +204,7 @@ export default function RootLayout({
       
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
-          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
             <Navbar />
             <main className="pt-16" id="main-content">
               {children}

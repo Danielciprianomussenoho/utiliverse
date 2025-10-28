@@ -2,36 +2,36 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://utiliverse.com'; // ALTERE para seu domínio
-  
+  const baseUrl = 'https://utiliverse.com'; // Atualize para o domínio definitivo
+
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: '/', // Permite indexação de todas as páginas públicas
         disallow: [
-          '/api/', // Bloquear APIs internas
-          '/admin/', // Se tiver admin
-          '/private/', // Se tiver áreas privadas
+          '/api/',      // Bloqueia APIs internas
+          '/admin/',    // Bloqueia área de administração
+          '/private/',  // Bloqueia áreas privadas futuras
         ],
       },
       {
         userAgent: 'Googlebot',
-        allow: '/',
-        crawlDelay: 1, // Delay de 1 segundo entre requests
+        allow: '/',   // Google indexa normalmente
+        // crawlDelay é desnecessário para Google e pode ser removido
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        crawlDelay: 2, // Delay maior para Bing
+        crawlDelay: 2, // Mantém delay para não sobrecarregar
       },
     ],
     sitemap: [
-      `${baseUrl}/sitemap.xml`,
-      // Pode adicionar sitemaps adicionais se tiver muitos URLs
-      // `${baseUrl}/sitemap-tools.xml`,
-      // `${baseUrl}/sitemap-blog.xml`,
+      `${baseUrl}/sitemap.xml`,          // Sitemap principal
+      `${baseUrl}/sitemap-tools.xml`,    // Sitemap separado para ferramentas
+      `${baseUrl}/sitemap-blog.xml`,     // Sitemap separado para blog
+      // Adicione mais sitemaps se criar mais seções
     ],
-    host: baseUrl,
+    host: baseUrl, // Domínio do site
   };
 }
