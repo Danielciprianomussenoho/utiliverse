@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://utiliverse.com'; // ALTERE para seu domínio
+  const baseUrl = 'https://getutiliverse.com'; 
   const now = new Date();
 
   // URLs estáticas principais

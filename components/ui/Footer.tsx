@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   'Recursos': [
     { name: 'Blog', href: '/blog' },
+    { name: 'Sobre', href: '/sobre' },
     { name: 'Tutoriais', href: '/tutoriais' },
     { name: 'API', href: '/api' },
   ],
@@ -18,6 +19,7 @@ const footerLinks = {
     { name: 'Privacidade', href: '/privacidade' },
     { name: 'Termos de Uso', href: '/termos' },
     { name: 'Cookies', href: '/cookies' },
+    { name: 'Contato', href: '/contato' },
   ]
 };
 
@@ -74,6 +76,9 @@ export default function Footer() {
             © 2024 Utiliverse. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/sobre" className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-sm">
+              Sobre
+            </Link>
             <Link href="/privacidade" className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-sm">
               Privacidade
             </Link>

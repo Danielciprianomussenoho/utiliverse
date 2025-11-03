@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   ].join(', '),
   
   // Metadados de autoria e propriedade
-  authors: [{ name: 'Utiliverse', url: 'https://utiliverse.com' }],
+  authors: [{ name: 'Utiliverse', url: 'https://getutiliverse.com' }],
   creator: 'Utiliverse',
   publisher: 'Utiliverse',
   
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   
   // URL base e canonical
-  metadataBase: new URL('https://utiliverse.com'), // ALTERE para seu domínio real
+  metadataBase: new URL('https://getutiliverse.com'), // ALTERE para seu domínio real
   alternates: {
     canonical: '/',
     languages: {
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://utiliverse.com',
+    url: 'https://getutiliverse.com',
     siteName: 'Utiliverse',
     title: 'Utiliverse - Ferramentas Online Gratuitas e de Qualidade',
     description: 'Descubra mais de 20 ferramentas online gratuitas para cálculos, conversões e utilitários do dia a dia. Interface simples e resultados precisos.',
@@ -141,7 +141,7 @@ export const metadata: Metadata = {
   // AppLinks
   appLinks: {
     web: {
-      url: 'https://utiliverse.com',
+      url: 'https://getutiliverse.com',
       should_fallback: false,
     },
   },
@@ -154,12 +154,12 @@ const jsonLd = {
   '@type': 'WebSite',
   name: 'Utiliverse',
   description: 'Ferramentas online gratuitas para cálculos, conversões e utilitários do dia a dia',
-  url: 'https://utiliverse.com',
+  url: 'https://getutiliverse.com',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://utiliverse.com/todas-ferramentas?search={search_term_string}'
+      urlTemplate: 'https://getutiliverse.com/todas-ferramentas?search={search_term_string}'
     },
     'query-input': 'required name=search_term_string'
   },
@@ -168,7 +168,7 @@ const jsonLd = {
     name: 'Utiliverse',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://utiliverse.com/images/logo.png'
+      url: 'https://getutiliverse.com/images/logo.png'
     }
   }
 };

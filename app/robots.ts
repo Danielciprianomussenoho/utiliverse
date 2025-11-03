@@ -2,8 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://utiliverse.com'; // Atualize para o domínio definitivo
-
+  const baseUrl = 'https://getutiliverse.com'; 
   return {
     rules: [
       {
@@ -32,6 +31,6 @@ export default function robots(): MetadataRoute.Robots {
       `${baseUrl}/sitemap-blog.xml`,     // Sitemap separado para blog
       // Adicione mais sitemaps se criar mais seções
     ],
-    host: baseUrl, // Domínio do site
+    host: baseUrl, 
   };
 }

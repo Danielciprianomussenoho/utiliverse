@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useTheme } from '@/components/providers/ThemeProvider';
-import { Sun, Moon, Menu, BookOpen, Grid3X3 } from 'lucide-react';
+import { Sun, Moon, Menu, BookOpen, Grid3X3, Target } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -70,6 +70,18 @@ export default function Navbar() {
               >
                 <Grid3X3 className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span itemProp="name">Ferramentas</span>
+              </Link>
+
+              {/* Link sobre com SEO */}
+              <Link
+                href="/sobre"
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium group"
+                aria-label= 'Descubra a história do Utiliverse e nossa missão de democratizar o acesso a ferramentas online úteis e gratuitas para todos.'
+                title="Sobre o Utiliverse - Nossa Missão e Valores | Ferramentas Online"
+                itemProp="url"
+              >
+                <Target className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span itemProp="name">Sobre</span>
               </Link>
 
             </div>
@@ -150,6 +162,19 @@ export default function Navbar() {
             >
               <Grid3X3 className="w-4 h-4" aria-hidden="true" />
               <span itemProp="name">Ferramentas</span>
+            </Link>
+
+            <Link
+              href="/sobre"
+              className="flex items-center space-x-2 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Todas as Ferramentas Online do Utiliverse"
+              title="Explorar Todas as Ferramentas Gratuitas"
+              role="menuitem"
+              itemProp="url"
+            >
+              <Target className="w-4 h-4" aria-hidden="true" />
+              <span itemProp="name">Sobre</span>
             </Link>
 
           </div>
