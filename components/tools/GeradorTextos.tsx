@@ -129,7 +129,7 @@ export default function GeradorTextos() {
     return placeholders;
   }, []);
 
-  const formatarConteudo = useCallback((conteudo: string | string[], tipo: TipoTexto, formato: Formato) => {
+  const formatarConteudo = useCallback((conteudo: string | string[], tipo: TipoTexto, formato: Formato): string => {
     if (formato === 'texto') {
       if (Array.isArray(conteudo)) {
         return conteudo.join('\n\n');
@@ -161,7 +161,7 @@ export default function GeradorTextos() {
       return conteudo;
     }
     
-    return conteudo;
+    return Array.isArray(conteudo) ? conteudo.join('\n\n') : conteudo;
   }, []);
 
   const gerarTextos = useCallback(() => {

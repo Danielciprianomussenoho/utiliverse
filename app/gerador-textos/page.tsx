@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function GeradorTextosPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-gray-900 dark:to-gray-800 py-8">
+    <div className="min-h-screen bg-linear-to-br from-violet-50 to-fuchsia-50 dark:from-gray-900 dark:to-gray-800 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-3xl mb-6 shadow-lg">
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-linear-to-r from-violet-500 to-fuchsia-500 rounded-3xl mb-6 shadow-lg">
             <FileText className="w-12 h-12 text-white" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 bg-linear-to-r from-violet-600 to-fuchsia-600 bg-clip-text ">
             Gerador de Textos
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -62,19 +62,19 @@ export default function GeradorTextosPage() {
               </div>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Lorem Ipsum clássico</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Parágrafos customizados</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Citações inspiradoras</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Texto placeholder realista</span>
                 </li>
               </ul>
@@ -88,19 +88,19 @@ export default function GeradorTextosPage() {
               </div>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Mockups de design</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Testes de layout</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Prototipação rápida</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Placeholder de conteúdo</span>
                 </li>
               </ul>
@@ -152,7 +152,7 @@ export default function GeradorTextosPage() {
               
               <div className="space-y-4 mt-6">
                 <div className="flex items-start p-4 bg-violet-50 dark:bg-violet-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-violet-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">📖</div>
+                  <div className="w-8 h-8 bg-violet-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">📖</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Origem Histórica</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Baseado no trabalho <strong> de Finibus Bonorum et Malorum </strong> de Cícero</p>
@@ -160,7 +160,7 @@ export default function GeradorTextosPage() {
                 </div>
                 
                 <div className="flex items-start p-4 bg-fuchsia-50 dark:bg-fuchsia-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-fuchsia-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">🎨</div>
+                  <div className="w-8 h-8 bg-fuchsia-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">🎨</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Uso no Design</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Permite focar no layout sem distrações com conteúdo real</p>
@@ -168,7 +168,7 @@ export default function GeradorTextosPage() {
                 </div>
 
                 <div className="flex items-start p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-purple-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">🌍</div>
+                  <div className="w-8 h-8 bg-purple-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">🌍</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Padrão Universal</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Utilizado mundialmente por designers e desenvolvedores</p>

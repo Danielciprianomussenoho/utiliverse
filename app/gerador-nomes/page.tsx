@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function GeradorNomesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 py-8">
+    <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl mb-6 shadow-lg">
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-linear-to-r from-emerald-500 to-teal-500 rounded-3xl mb-6 shadow-lg">
             <Users className="w-12 h-12 text-white" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text">
             Gerador de Nomes
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -62,19 +62,19 @@ export default function GeradorNomesPage() {
               </div>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Nomes de pessoas (completos)</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Nomes de empresas e startups</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Nomes para projetos e marcas</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Nomes criativos e únicos</span>
                 </li>
               </ul>
@@ -88,19 +88,19 @@ export default function GeradorNomesPage() {
               </div>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Seja memorável e único</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Verifique disponibilidade</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Considere o público-alvo</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 shrink-0" />
                   <span>Teste a pronúncia</span>
                 </li>
               </ul>
@@ -151,7 +151,7 @@ export default function GeradorNomesPage() {
               
               <div className="space-y-4 mt-6">
                 <div className="flex items-start p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">🎯</div>
+                  <div className="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">🎯</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Primeira Impressão</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">O nome é often a primeira coisa que as pessoas veem sobre seu projeto</p>
@@ -159,7 +159,7 @@ export default function GeradorNomesPage() {
                 </div>
                 
                 <div className="flex items-start p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-purple-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">🚀</div>
+                  <div className="w-8 h-8 bg-purple-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">🚀</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Diferenciação</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Um nome único ajuda a se destacar da concorrência</p>
@@ -167,7 +167,7 @@ export default function GeradorNomesPage() {
                 </div>
 
                 <div className="flex items-start p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-                  <div className="w-8 h-8 bg-green-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">💡</div>
+                  <div className="w-8 h-8 bg-green-500 text-white rounded-lg flex items-center justify-center text-sm font-bold mr-4 shrink-0">💡</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Storytelling</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Bons nomes contam uma história e criam conexão emocional</p>

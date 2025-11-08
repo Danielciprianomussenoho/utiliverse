@@ -19,7 +19,7 @@ export default function GeradorNomes() {
   const [gerando, setGerando] = useState(false);
   const [todosCopiados, setTodosCopiados] = useState(false);
 
-  // Bancos de dados de nomes (mantido igual)
+  // Bancos de dados de nomes COMPLETOS com todos os idiomas
   const bancosNomes = {
     pessoas: {
       pt: {
@@ -29,6 +29,18 @@ export default function GeradorNomes() {
       en: {
         nomes: ['James', 'John', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles', 'Mary', 'Patricia', 'Jennifer', 'Linda', 'Elizabeth', 'Barbara', 'Susan', 'Jessica', 'Sarah'],
         sobrenomes: ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez', 'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson', 'Thomas', 'Taylor']
+      },
+      es: {
+        nomes: ['Carlos', 'José', 'Manuel', 'Francisco', 'David', 'Juan', 'Javier', 'Daniel', 'Miguel', 'Ángel', 'María', 'Carmen', 'Ana', 'Isabel', 'Dolores', 'Pilar', 'Laura', 'Sara', 'Elena'],
+        sobrenomes: ['García', 'Fernández', 'González', 'Rodríguez', 'López', 'Martínez', 'Sánchez', 'Pérez', 'Martín', 'Gómez', 'Ruiz', 'Hernández', 'Jiménez', 'Díaz', 'Moreno', 'Álvarez', 'Romero']
+      },
+      fr: {
+        nomes: ['Jean', 'Pierre', 'Michel', 'Philippe', 'Alain', 'Nicolas', 'Christophe', 'Patrick', 'Daniel', 'David', 'Marie', 'Nathalie', 'Isabelle', 'Sylvie', 'Catherine', 'Françoise', 'Monique', 'Anne', 'Sophie'],
+        sobrenomes: ['Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Richard', 'Petit', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux']
+      },
+      it: {
+        nomes: ['Giuseppe', 'Antonio', 'Mario', 'Luigi', 'Giovanni', 'Francesco', 'Angelo', 'Salvatore', 'Vincenzo', 'Pietro', 'Maria', 'Anna', 'Giuseppina', 'Rosa', 'Angela', 'Teresa', 'Lucia', 'Carmela', 'Francesca'],
+        sobrenomes: ['Rossi', 'Russo', 'Ferrari', 'Esposito', 'Bianchi', 'Romano', 'Colombo', 'Ricci', 'Marino', 'Greco', 'Bruno', 'Gallo', 'Conti', 'De Luca', 'Mancini', 'Costa', 'Giordano', 'Rizzo']
       }
     },
     empresas: {
@@ -37,6 +49,18 @@ export default function GeradorNomes() {
         sufixos: ['Solutions', 'Tech', 'Labs', 'Systems', 'Works', 'Group', 'Corp', 'Industries', 'Enterprises', 'Ventures', 'Network', 'Digital', 'Innovations', 'Studio', 'Agency']
       },
       en: {
+        prefixos: ['Nexus', 'Quantum', 'Aurora', 'Infinity', 'Digital', 'Future', 'Smart', 'Global', 'Prime', 'Elite', 'Alpha', 'Omega', 'Vertex', 'Pulse', 'Core', 'Spark', 'Nova'],
+        sufixos: ['Solutions', 'Tech', 'Labs', 'Systems', 'Works', 'Group', 'Corp', 'Industries', 'Enterprises', 'Ventures', 'Network', 'Digital', 'Innovations', 'Studio', 'Agency']
+      },
+      es: {
+        prefixos: ['Nexus', 'Quantum', 'Aurora', 'Infinity', 'Digital', 'Future', 'Smart', 'Global', 'Prime', 'Elite', 'Alpha', 'Omega', 'Vertex', 'Pulse', 'Core', 'Spark', 'Nova'],
+        sufixos: ['Solutions', 'Tech', 'Labs', 'Systems', 'Works', 'Group', 'Corp', 'Industries', 'Enterprises', 'Ventures', 'Network', 'Digital', 'Innovations', 'Studio', 'Agency']
+      },
+      fr: {
+        prefixos: ['Nexus', 'Quantum', 'Aurora', 'Infinity', 'Digital', 'Future', 'Smart', 'Global', 'Prime', 'Elite', 'Alpha', 'Omega', 'Vertex', 'Pulse', 'Core', 'Spark', 'Nova'],
+        sufixos: ['Solutions', 'Tech', 'Labs', 'Systems', 'Works', 'Group', 'Corp', 'Industries', 'Enterprises', 'Ventures', 'Network', 'Digital', 'Innovations', 'Studio', 'Agency']
+      },
+      it: {
         prefixos: ['Nexus', 'Quantum', 'Aurora', 'Infinity', 'Digital', 'Future', 'Smart', 'Global', 'Prime', 'Elite', 'Alpha', 'Omega', 'Vertex', 'Pulse', 'Core', 'Spark', 'Nova'],
         sufixos: ['Solutions', 'Tech', 'Labs', 'Systems', 'Works', 'Group', 'Corp', 'Industries', 'Enterprises', 'Ventures', 'Network', 'Digital', 'Innovations', 'Studio', 'Agency']
       }
@@ -49,6 +73,18 @@ export default function GeradorNomes() {
       en: {
         adjetivos: ['Agile', 'Digital', 'Future', 'Smart', 'Creative', 'Innovative', 'Global', 'Local', 'Fast', 'Secure', 'Flexible', 'Modern', 'Efficient', 'Sustainable', 'Dynamic'],
         substantivos: ['Project', 'System', 'Platform', 'Solution', 'Portal', 'Hub', 'Network', 'Framework', 'Engine', 'App', 'Site', 'API', 'Protocol', 'Model', 'Concept']
+      },
+      es: {
+        adjetivos: ['Ágil', 'Digital', 'Futuro', 'Inteligente', 'Creativo', 'Innovador', 'Global', 'Local', 'Rápido', 'Seguro', 'Flexible', 'Moderno', 'Eficiente', 'Sostenible', 'Dinámico'],
+        substantivos: ['Proyecto', 'Sistema', 'Plataforma', 'Solución', 'Portal', 'Hub', 'Network', 'Framework', 'Engine', 'App', 'Sitio', 'API', 'Protocolo', 'Modelo', 'Concepto']
+      },
+      fr: {
+        adjetivos: ['Agile', 'Digital', 'Futur', 'Intelligent', 'Créatif', 'Innovant', 'Global', 'Local', 'Rapide', 'Sécurisé', 'Flexible', 'Moderne', 'Efficient', 'Durable', 'Dynamique'],
+        substantivos: ['Projet', 'Système', 'Plateforme', 'Solution', 'Portail', 'Hub', 'Réseau', 'Framework', 'Moteur', 'App', 'Site', 'API', 'Protocole', 'Modèle', 'Concept']
+      },
+      it: {
+        adjetivos: ['Agile', 'Digitale', 'Futuro', 'Intelligente', 'Creativo', 'Innovativo', 'Globale', 'Locale', 'Veloce', 'Sicuro', 'Flessibile', 'Moderno', 'Efficiente', 'Sostenibile', 'Dinamico'],
+        substantivos: ['Progetto', 'Sistema', 'Piattaforma', 'Soluzione', 'Portale', 'Hub', 'Rete', 'Framework', 'Motore', 'App', 'Sito', 'API', 'Protocollo', 'Modello', 'Concetto']
       }
     },
     marcas: {
@@ -59,6 +95,18 @@ export default function GeradorNomes() {
       en: {
         palavras: ['Zen', 'Pure', 'Essence', 'Life', 'Natural', 'Organic', 'Eco', 'Green', 'Light', 'Air', 'Earth', 'Fire', 'Water', 'Sky', 'Sea', 'Sun', 'Moon'],
         sufixos: ['Life', 'Care', 'Style', 'Tech', 'Food', 'Wear', 'Home', 'Garden', 'Beauty', 'Health', 'Fit', 'Active', 'Pure', 'Natural', 'Organic']
+      },
+      es: {
+        palavras: ['Zen', 'Puro', 'Esencia', 'Vida', 'Natural', 'Orgánico', 'Eco', 'Verde', 'Luz', 'Aire', 'Tierra', 'Fuego', 'Agua', 'Cielo', 'Mar', 'Sol', 'Luna'],
+        sufixos: ['Life', 'Care', 'Style', 'Tech', 'Food', 'Wear', 'Home', 'Garden', 'Beauty', 'Health', 'Fit', 'Active', 'Pure', 'Natural', 'Organic']
+      },
+      fr: {
+        palavras: ['Zen', 'Pur', 'Essence', 'Vie', 'Naturel', 'Biologique', 'Éco', 'Vert', 'Lumière', 'Air', 'Terre', 'Feu', 'Eau', 'Ciel', 'Mer', 'Soleil', 'Lune'],
+        sufixos: ['Life', 'Care', 'Style', 'Tech', 'Food', 'Wear', 'Home', 'Garden', 'Beauty', 'Health', 'Fit', 'Active', 'Pure', 'Natural', 'Organic']
+      },
+      it: {
+        palavras: ['Zen', 'Puro', 'Essenza', 'Vita', 'Naturale', 'Biologico', 'Eco', 'Verde', 'Luce', 'Aria', 'Terra', 'Fuoco', 'Acqua', 'Cielo', 'Mare', 'Sole', 'Luna'],
+        sufixos: ['Life', 'Care', 'Style', 'Tech', 'Food', 'Wear', 'Home', 'Garden', 'Beauty', 'Health', 'Fit', 'Active', 'Pure', 'Natural', 'Organic']
       }
     },
     produtos: {
@@ -67,6 +115,18 @@ export default function GeradorNomes() {
         sufixos: ['Plus', 'Pro', 'Lite', 'Air', 'Max', 'X', '360', 'HD', '4K', 'WiFi', 'Bluetooth', 'USB', 'Touch', 'Go', 'Mini']
       },
       en: {
+        prefixos: ['Super', 'Mega', 'Hyper', 'Ultra', 'Max', 'Pro', 'Lite', 'Smart', 'Easy', 'Quick', 'Fast', 'Power', 'Turbo', 'Eco', 'Bio'],
+        sufixos: ['Plus', 'Pro', 'Lite', 'Air', 'Max', 'X', '360', 'HD', '4K', 'WiFi', 'Bluetooth', 'USB', 'Touch', 'Go', 'Mini']
+      },
+      es: {
+        prefixos: ['Super', 'Mega', 'Hyper', 'Ultra', 'Max', 'Pro', 'Lite', 'Smart', 'Easy', 'Quick', 'Fast', 'Power', 'Turbo', 'Eco', 'Bio'],
+        sufixos: ['Plus', 'Pro', 'Lite', 'Air', 'Max', 'X', '360', 'HD', '4K', 'WiFi', 'Bluetooth', 'USB', 'Touch', 'Go', 'Mini']
+      },
+      fr: {
+        prefixos: ['Super', 'Mega', 'Hyper', 'Ultra', 'Max', 'Pro', 'Lite', 'Smart', 'Easy', 'Quick', 'Fast', 'Power', 'Turbo', 'Éco', 'Bio'],
+        sufixos: ['Plus', 'Pro', 'Lite', 'Air', 'Max', 'X', '360', 'HD', '4K', 'WiFi', 'Bluetooth', 'USB', 'Touch', 'Go', 'Mini']
+      },
+      it: {
         prefixos: ['Super', 'Mega', 'Hyper', 'Ultra', 'Max', 'Pro', 'Lite', 'Smart', 'Easy', 'Quick', 'Fast', 'Power', 'Turbo', 'Eco', 'Bio'],
         sufixos: ['Plus', 'Pro', 'Lite', 'Air', 'Max', 'X', '360', 'HD', '4K', 'WiFi', 'Bluetooth', 'USB', 'Touch', 'Go', 'Mini']
       }
@@ -79,11 +139,23 @@ export default function GeradorNomes() {
       en: {
         palavras: ['tech', 'digital', 'online', 'cloud', 'web', 'app', 'dev', 'code', 'soft', 'net', 'sys', 'data', 'info', 'smart', 'auto', 'bio', 'eco'],
         extensoes: ['.com', '.net', '.org', '.io', '.dev', '.app', '.tech', '.digital', '.online', '.cloud', '.site']
+      },
+      es: {
+        palavras: ['tech', 'digital', 'online', 'cloud', 'web', 'app', 'dev', 'code', 'soft', 'net', 'sys', 'data', 'info', 'smart', 'auto', 'bio', 'eco'],
+        extensoes: ['.com', '.es', '.net', '.org', '.io', '.dev', '.app', '.tech', '.digital', '.online', '.cloud', '.site']
+      },
+      fr: {
+        palavras: ['tech', 'digital', 'online', 'cloud', 'web', 'app', 'dev', 'code', 'soft', 'net', 'sys', 'data', 'info', 'smart', 'auto', 'bio', 'eco'],
+        extensoes: ['.com', '.fr', '.net', '.org', '.io', '.dev', '.app', '.tech', '.digital', '.online', '.cloud', '.site']
+      },
+      it: {
+        palavras: ['tech', 'digital', 'online', 'cloud', 'web', 'app', 'dev', 'code', 'soft', 'net', 'sys', 'data', 'info', 'smart', 'auto', 'bio', 'eco'],
+        extensoes: ['.com', '.it', '.net', '.org', '.io', '.dev', '.app', '.tech', '.digital', '.online', '.cloud', '.site']
       }
     }
   };
 
-  // Funções de geração (mantidas iguais)
+  // Funções de geração
   const gerarNomePessoa = useCallback(() => {
     const banco = bancosNomes.pessoas[idioma];
     const nome = banco.nomes[Math.floor(Math.random() * banco.nomes.length)];
@@ -128,7 +200,7 @@ export default function GeradorNomes() {
 
   const gerarNomes = useCallback(() => {
     setGerando(true);
-    setTodosCopiados(false); // Resetar estado de cópia
+    setTodosCopiados(false);
     
     setTimeout(() => {
       const novosNomes: NomeGerado[] = [];
@@ -195,7 +267,6 @@ export default function GeradorNomes() {
     try {
       await navigator.clipboard.writeText(todosNomes);
       
-      // Usar estado do React em vez de manipular DOM diretamente
       setTodosCopiados(true);
       setNomesGerados(prev => 
         prev.map(item => ({ ...item, copiado: true }))
