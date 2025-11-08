@@ -52,7 +52,7 @@ const blogPosts = [
     author: 'Dr. Física Silva',
     readTime: '5 min de leitura',
     category: 'Ciência',
-    slug: 'conversao-temperatura'
+    slug: 'conversao-temperatura-guia'
   },
   {
     id: 6,
@@ -134,16 +134,16 @@ const blogPosts = [
     category: 'Utilitários',
     slug: 'calculadora-idade'
   },
-  {
-    id: 14,
-    title: 'Gerador de Senhas Seguras: Como Criar e Gerenciar Senhas à Prova de Hackers',
-    excerpt: 'Aprenda a criar senhas seguras que protegem suas contas contra hackers e descubra as melhores práticas de segurança digital.',
-    date: '2024-12-11',
-    author: 'Especialista em Cybersecurity',
-    readTime: '6 min de leitura',
-    category: 'Segurança',
-    slug: 'gerador-senhas-seguras'
-  },
+  // {
+  //   id: 14,
+  //   title: 'Gerador de Senhas Seguras: Como Criar e Gerenciar Senhas à Prova de Hackers',
+  //   excerpt: 'Aprenda a criar senhas seguras que protegem suas contas contra hackers e descubra as melhores práticas de segurança digital.',
+  //   date: '2024-12-11',
+  //   author: 'Especialista em Cybersecurity',
+  //   readTime: '6 min de leitura',
+  //   category: 'Segurança',
+  //   slug: 'seguranca-digital-senhas-fortes'
+  // },
   {
     id: 15,
     title: 'Conversor de Unidades: Guia Completo para Conversões Precisas',
@@ -218,7 +218,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-r from-blue-500 to-purple-600 rounded-full mb-6">
             <BookOpen className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -246,12 +246,12 @@ export default function BlogPage() {
                   </span>
                   
                   {/* Title */}
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 flex-grow">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 grow">
                     {post.title}
                   </h2>
                   
                   {/* Excerpt */}
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 flex-grow">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 grow">
                     {post.excerpt}
                   </p>
                   
@@ -310,7 +310,7 @@ export default function BlogPage() {
 
         {/* Categories Section */}
         <section className="mb-12">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">
+          <div className="bg-linear-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
               Explore por Categoria
             </h2>
@@ -361,7 +361,7 @@ export default function BlogPage() {
 
         {/* Newsletter CTA */}
         <section className="mb-8">
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 text-center">
+          <div className="bg-linear-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 text-center">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               Receba as novidades por email
             </h3>

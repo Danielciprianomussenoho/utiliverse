@@ -15,7 +15,7 @@ export default function UnitsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Otimizado */}
         <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-green-500 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-r from-teal-500 to-green-500 rounded-full mb-6">
             <Ruler className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -127,7 +127,7 @@ export default function UnitsPage() {
               {/* Dicas de Conversão */}
               <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-6 mt-6">
                 <div className="flex items-start">
-                  <Cpu className="w-6 h-6 text-yellow-600 mr-3 mt-1 flex-shrink-0" />
+                  <Cpu className="w-6 h-6 text-yellow-600 mr-3 mt-1 shrink-0" />
                   <div>
                     <h4 className="text-lg font-semibold text-yellow-800 dark:text-yellow-300 mb-2">
                       Dicas para Conversões Precisas

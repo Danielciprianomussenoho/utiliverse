@@ -42,15 +42,15 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section com SEO */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-20">
+      <section className="relative bg-linear-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6 shadow-lg">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-r from-blue-500 to-purple-600 rounded-full mb-6 shadow-lg">
               <Grid3X3 className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Bem-vindo ao{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Utiliverse
               </span>
             </h1>
@@ -118,7 +118,7 @@ export default function Home() {
                 className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:-translate-y-1"
                 aria-label={`Acessar ${tool.name} - ${tool.description}`}
               >
-                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${tool.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                <div className={`inline-flex p-3 rounded-lg bg-linear-to-r ${tool.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
                   <tool.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -149,7 +149,7 @@ export default function Home() {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-r from-purple-500 to-pink-500 rounded-full mb-4">
               <BookOpen className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">

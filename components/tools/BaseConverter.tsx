@@ -234,7 +234,7 @@ export default function BaseConverter() {
 
       {/* Resultados em Destaque */}
       {values.decimal && (
-        <div className="bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 rounded-xl p-6 border border-violet-200 dark:border-violet-800">
+        <div className="bg-linear-to-r from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 rounded-xl p-6 border border-violet-200 dark:border-violet-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
             Conversão Completa
           </h3>

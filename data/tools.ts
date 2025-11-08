@@ -14,7 +14,13 @@ import {
   Binary,
   FunctionSquare,
   Palette,
-  Droplets
+  Droplets,
+  Scale,
+  Apple,
+  Flame,
+  Heart,
+  Users,
+  FileText
 } from 'lucide-react';
 
 export const allTools = [
@@ -22,10 +28,98 @@ export const allTools = [
     name: 'Calculadora IMC',
     description: 'Calcule seu Índice de Massa Corporal e saiba sua classificação',
     href: '/imc',
-    icon: Calculator,
+    icon: Heart,
     color: 'from-blue-500 to-cyan-500',
+    category: 'Saúde & Fitness'
+  },
+   {
+    name: 'Conversor de Moedas',
+    description: 'Converta entre Real, Dólar, Euro e outras moedas',
+    href: '/moedas', 
+    icon: DollarSign,
+    color: 'from-yellow-500 to-orange-500',
+    category: 'Finanças'
+  },
+  {
+  name: 'Gerador de Personagens',
+  description: 'Crie personagens únicos para RPG, jogos, histórias e projetos criativos',
+  href: '/gerador-personagens',
+  icon: Users,
+  color: 'from-indigo-500 to-purple-500',
+  category: 'Criatividade'
+  },
+  {
+  name: 'Comparador de Preços',
+  description: 'Compare preços de produtos entre diferentes lojas e encontre as melhores ofertas',
+  href: '/comparador-precos',
+  icon: Scale,
+  color: 'from-green-500 to-emerald-500',
+  category: 'Utilitários'
+  },
+  {
+  name: 'Gerador de Textos',
+  description: 'Gere Lorem Ipsum, parágrafos realistas, citações e texto placeholder',
+  href: '/gerador-textos',
+  icon: FileText,
+  color: 'from-violet-500 to-fuchsia-500',
+  category: 'Criatividade'
+},
+{
+  name: 'Gerador de Logos',
+  description: 'Crie logos profissionais personalizados para sua empresa ou marca',
+  href: '/gerador-logos',
+  icon: Palette,
+  color: 'from-amber-500 to-orange-500',
+  category: 'Criatividade'
+},
+  {
+  name: 'Gerador de Nomes',
+  description: 'Gere nomes aleatórios para pessoas, empresas, projetos, marcas e domínios',
+  href: '/gerador-nomes',
+  icon: Users,
+  color: 'from-emerald-500 to-teal-500',
+  category: 'Criatividade' // Nova categoria!
+},
+{
+  name: 'Cronômetro & Temporizador',
+  description: 'Cronômetro preciso e temporizador com alarme para esportes, estudos e produtividade',
+  href: '/cronometro',
+  icon: Clock,
+  color: 'from-indigo-500 to-purple-500',
+  category: 'Produtividade' // Nova categoria!
+},
+  {
+    name: 'Calculadora Regra de Três',
+    description: 'Calcule regra de três simples e composta com explicações passo a passo',
+    href: '/regra-tres',
+    icon: Scale, 
+    color: 'from-purple-500 to-pink-500',
     category: 'Calculadoras'
   },
+  {
+  name: 'Calculadora de Calorias',
+  description: 'Calcule suas necessidades diárias de calorias para perda de peso, ganho muscular ou manutenção',
+  href: '/calorias',
+  icon: Apple, 
+  color: 'from-orange-500 to-rose-500',
+  category: 'Saúde & Fitness'
+},
+{
+  name: 'Calculadora de Água',
+  description: 'Calcule sua necessidade diária de água para hidratação ideal',
+  href: '/agua',
+  icon: Droplets,
+  color: 'from-cyan-500 to-blue-500',
+  category: 'Saúde & Fitness'
+},
+{
+  name: 'Calculadora de Exercícios',
+  description: 'Calcule calorias queimadas em diferentes atividades físicas',
+  href: '/exercicios',
+  icon: Flame,
+  color: 'from-red-500 to-orange-500',
+  category: 'Saúde & Fitness'
+},
   {
     name: 'Conversor de Tempo',
     description: 'Converta entre horas, minutos, segundos e dias',
@@ -41,14 +135,6 @@ export const allTools = [
     icon: Calendar,
     color: 'from-green-500 to-emerald-500',
     category: 'Calculadoras'
-  },
-  {
-    name: 'Conversor de Moedas',
-    description: 'Converta entre Real, Dólar, Euro e outras moedas',
-    href: '/moedas', 
-    icon: DollarSign,
-    color: 'from-yellow-500 to-orange-500',
-    category: 'Conversores'
   },
   {
     name: 'Calculadora de %',

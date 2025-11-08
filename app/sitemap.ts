@@ -2,54 +2,123 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://getutiliverse.com'; 
+  const baseUrl = 'https://getutiliverse.com';
+  
+  // Datas realistas para melhor SEO
   const now = new Date();
+  const lastWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+  const lastMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 
-  // URLs estáticas principais
+  // URLs estáticas principais com datas realistas
   const staticRoutes = [
-    { url: baseUrl, lastModified: now, changeFrequency: 'daily' as const, priority: 1.0 },
-    { url: `${baseUrl}/todas-ferramentas`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/tutoriais`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/sobre`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.7 },
-    { url: `${baseUrl}/contato`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.7 },
-    { url: `${baseUrl}/cookies`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/privacidade`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/termos`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { 
+      url: baseUrl, 
+      lastModified: now,
+      changeFrequency: 'daily' as const, 
+      priority: 1.0 
+    },
+    { 
+      url: `${baseUrl}/todas-ferramentas`, 
+      lastModified: lastWeek,
+      changeFrequency: 'weekly' as const, 
+      priority: 0.9 
+    },
+    { 
+      url: `${baseUrl}/blog`, 
+      lastModified: now,
+      changeFrequency: 'weekly' as const, 
+      priority: 0.8 
+    },
+    { 
+      url: `${baseUrl}/tutoriais`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'monthly' as const, 
+      priority: 0.7 
+    },
+    { 
+      url: `${baseUrl}/sobre`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'yearly' as const, 
+      priority: 0.5 
+    },
+    { 
+      url: `${baseUrl}/contato`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'yearly' as const, 
+      priority: 0.5 
+    },
+    { 
+      url: `${baseUrl}/cookies`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'yearly' as const, 
+      priority: 0.3 
+    },
+    { 
+      url: `${baseUrl}/privacidade`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'yearly' as const, 
+      priority: 0.3 
+    },
+    { 
+      url: `${baseUrl}/termos`, 
+      lastModified: lastMonth, 
+      changeFrequency: 'yearly' as const, 
+      priority: 0.3 
+    },
   ];
 
-  // URLs dinâmicas das ferramentas
+  // TODAS as 30 ferramentas com prioridades realistas
   const tools = [
-    { slug: 'imc', priority: 0.95 },
-    { slug: 'idade', priority: 0.9 },
-    { slug: 'moedas', priority: 0.9 },
-    { slug: 'porcentagem', priority: 0.9 },
-    { slug: 'contador', priority: 0.85 },
-    { slug: 'senhas', priority: 0.9 },
-    { slug: 'romano', priority: 0.7 },
-    { slug: 'unidades', priority: 0.8 },
-    { slug: 'compressor-imagem', priority: 0.8 },
-    { slug: 'conversor-imagem', priority: 0.8 },
-    { slug: 'juros', priority: 0.8 },
-    { slug: 'editor-texto', priority: 0.8 },
-    { slug: 'calculadora-data', priority: 0.8 },
-    { slug: 'temperatura', priority: 0.8 },
-    { slug: 'bases', priority: 0.7 },
-    { slug: 'calculadora', priority: 0.9 },
-    { slug: 'cientifica', priority: 0.8 },
-    { slug: 'paleta-cores', priority: 0.7 },
-    { slug: 'gradientes', priority: 0.7 },
-    { slug: 'tempo', priority: 0.8 },
+    // Ferramentas TOP (alta prioridade)
+    { slug: 'imc', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'calculadora', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'idade', priority: 0.9, frequency: 'weekly' as const },
+    { slug: 'moedas', priority: 0.9, frequency: 'daily' as const },
+    { slug: 'senhas', priority: 0.9, frequency: 'weekly' as const },
+    
+    // Ferramentas populares
+    { slug: 'porcentagem', priority: 0.9, frequency: 'monthly' as const },
+    { slug: 'regra-tres', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'juros', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'calorias', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'temperatura', priority: 0.8, frequency: 'monthly' as const },
+    
+    // Geradores de conteúdo
+    { slug: 'gerador-nomes', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'gerador-textos', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'gerador-logos', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'gerador-personagens', priority: 0.8, frequency: 'monthly' as const },
+    
+    // Ferramentas utilitárias
+    { slug: 'comparador-precos', priority: 0.8, frequency: 'weekly' as const },
+    { slug: 'exercicios', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'contador', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'unidades', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'compressor-imagem', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'conversor-imagem', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'editor-texto', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'calculadora-data', priority: 0.7, frequency: 'monthly' as const },
+    { slug: 'tempo', priority: 0.7, frequency: 'monthly' as const },
+    
+    // Ferramentas de nicho (menor prioridade)
+    { slug: 'agua', priority: 0.6, frequency: 'yearly' as const },
+    { slug: 'romano', priority: 0.6, frequency: 'yearly' as const },
+    { slug: 'cronometro', priority: 0.6, frequency: 'yearly' as const },
+    { slug: 'bases', priority: 0.6, frequency: 'yearly' as const },
+    { slug: 'cientifica', priority: 0.6, frequency: 'yearly' as const },
+    { slug: 'paleta-cores', priority: 0.6, frequency: 'monthly' as const },
+    { slug: 'gradientes', priority: 0.6, frequency: 'monthly' as const },
   ];
 
   const toolRoutes = tools.map(tool => ({
     url: `${baseUrl}/${tool.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
+    lastModified: tool.frequency === 'daily' ? now : 
+                  tool.frequency === 'weekly' ? lastWeek : lastMonth,
+    changeFrequency: tool.frequency,
     priority: tool.priority,
   }));
 
-  // URLs dinâmicas dos tutoriais
+  // Tutoriais
   const tutorials = [
     'como-usar-calculadora-imc',
     'conversor-moedas-dicas',
@@ -59,12 +128,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'conversor-unidades-completo',
   ].map(slug => ({
     url: `${baseUrl}/tutoriais/${slug}`,
-    lastModified: now,
+    lastModified: lastMonth,
     changeFrequency: 'monthly' as const,
-    priority: 0.75,
+    priority: 0.6,
   }));
 
-  // URLs dinâmicas dos posts do blog
+  // Posts do blog
   const blogPosts = [
     'como-calcular-imc',
     'ferramentas-online-essenciais',
@@ -87,9 +156,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'gerador-gradientes-css',
   ].map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: now,
+    lastModified: lastMonth,
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.6,
   }));
 
   return [...staticRoutes, ...toolRoutes, ...tutorials, ...blogPosts];

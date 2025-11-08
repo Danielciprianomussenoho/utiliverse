@@ -229,7 +229,7 @@ function ToolCard({ tool }: { tool: Tool }) {
       href={tool.href}
       className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:-translate-y-1"
     >
-      <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${tool.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+      <div className={`inline-flex p-3 rounded-lg bg-linear-to-r ${tool.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
         <tool.icon className="w-6 h-6 text-white" />
       </div>
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

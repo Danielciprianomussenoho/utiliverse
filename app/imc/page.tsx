@@ -4,9 +4,9 @@ import Link from 'next/link';
 import IMCCalculator from '@/components/tools/IMCCalculator';
 
 export const metadata = {
-  title: 'Calculadora IMC Online Grátis - Calcule Seu Índice de Massa Corporal | Utiliverse',
-  description: 'Calculadora IMC online gratuita e precisa. Calcule seu Índice de Massa Corporal, descubra sua classificação segundo a OMS e entenda os resultados. Ferramenta ideal para monitorar sua saúde.',
-  keywords: 'calculadora IMC, índice massa corporal, peso ideal, calculadora saúde, IMC online, obesidade, abaixo do peso',
+  title: 'Calculadora de IMC Online Grátis - Calcule Seu Índice de Massa Corporal | Utiliverse',
+  description: 'Calculadora de IMC online gratuita e precisa. Calcule seu Índice de Massa Corporal, descubra sua classificação segundo a OMS e entenda os resultados. Ferramenta ideal para monitorar sua saúde.',
+  keywords: 'calculadora de IMC, índice massa corporal, peso ideal, calculadora saúde, IMC online, obesidade, abaixo do peso',
 };
 
 export default function IMCPage() {
@@ -224,31 +224,31 @@ export default function IMCPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link 
-              href="/calculadora" 
+              href="/calorias" 
               className="flex items-center p-6 border border-gray-200 dark:border-gray-600 rounded-lg hover:border-blue-300 dark:hover:border-blue-600 transition-colors hover:shadow-md"
             >
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
                 <Calculator className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Calculadora Básica</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Operações matemáticas básicas e avançadas</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Calculadora de Calorias</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Calcule suas necessidades diárias de calorias</p>
               </div>
             </Link>
             <Link 
-              href="/cientifica" 
+              href="/agua" 
               className="flex items-center p-6 border border-gray-200 dark:border-gray-600 rounded-lg hover:border-blue-300 dark:hover:border-blue-600 transition-colors hover:shadow-md"
             >
               <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mr-4">
                 <FunctionSquare className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Calculadora Científica</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Funções trigonométricas e avançadas</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Calculadora de Água</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Calcule sua necessidade diária de água para hidratação ideal</p>
               </div>
             </Link>
             <Link 
-              href="/unidades" 
+              href="/exercicios" 
               className="flex items-center p-6 border border-gray-200 dark:border-gray-600 rounded-lg hover:border-blue-300 dark:hover:border-blue-600 transition-colors hover:shadow-md"
             >
               <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center mr-4">
@@ -256,8 +256,8 @@ export default function IMCPage() {
               </div>
               
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Conversor de Unidades</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Converta entre diferentes medidas</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Calculadora de Exercícios</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Calcule calorias queimadas em diferentes atividades físicas</p>
               </div>
             </Link>
           </div>

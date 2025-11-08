@@ -147,7 +147,7 @@ export default function IMCCalculator() {
 
         {/* Resultado  */}
         {result && (
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800">
+          <div className="bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800">
             <div className="text-center space-y-4">
               <div className={`text-5xl font-bold ${result.color} mb-2`}>
                 {result.imc}

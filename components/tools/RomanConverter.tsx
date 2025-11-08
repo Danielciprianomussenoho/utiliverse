@@ -301,7 +301,7 @@ export default function RomanConverter() {
 
       {/* Resultado em Destaque */}
       {(arabic && roman && !error) && (
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
+        <div className="bg-linear-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center flex items-center justify-center">
             <BookOpen className="w-5 h-5 mr-2 text-amber-600" />
             Conversão Realizada

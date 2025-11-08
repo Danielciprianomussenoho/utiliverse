@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Calendar, Plus, Minus, Calculator, RefreshCw } from 'lucide-react';
+import {  Plus, Minus, Calculator, RefreshCw } from 'lucide-react';
 
 interface DateDifference {
   years: number;
@@ -308,7 +308,7 @@ export default function DataCalculator() {
 
       {/* Results */}
       {result && (
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+        <div className="bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
             Diferença entre Datas
           </h3>
@@ -335,7 +335,7 @@ export default function DataCalculator() {
       )}
 
       {operationResult && (
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+        <div className="bg-linear-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
             Resultado da Operação
           </h3>
