@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+import Script from 'next/script';
 
 
 const inter = Inter({ 
@@ -210,6 +211,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         
+        {/* Meta tag do AdSense */}
+        <meta name="google-adsense-account" content="ca-pub-7814674079546155" />
+
         {/* Schema.org structured data */}
         <script
           type="application/ld+json"
@@ -220,6 +224,16 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+
+        {/* Script global do AdSense */}
+        <Script 
+          id="adsense" 
+          strategy="afterInteractive" 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814674079546155"
+          crossOrigin="anonymous" 
+        />
       </head>
       
       <body className={`${inter.className} antialiased`}>
