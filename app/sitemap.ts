@@ -72,12 +72,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Ferramentas TOP (alta prioridade)
     { slug: 'imc', priority: 1.0, frequency: 'weekly' as const },
     { slug: 'calculadora', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'emprestimos', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'financiamentos', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'investimentos', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'impostos', priority: 1.0, frequency: 'weekly' as const },
+    { slug: 'roi-marketing', priority: 1.0, frequency: 'weekly' as const },
     { slug: 'idade', priority: 0.9, frequency: 'weekly' as const },
     { slug: 'moedas', priority: 0.9, frequency: 'daily' as const },
     { slug: 'senhas', priority: 0.9, frequency: 'weekly' as const },
     
     // Ferramentas populares
     { slug: 'porcentagem', priority: 0.9, frequency: 'monthly' as const },
+    { slug: 'cac', priority: 0.9, frequency: 'monthly' as const },
     { slug: 'regra-tres', priority: 0.8, frequency: 'monthly' as const },
     { slug: 'juros', priority: 0.8, frequency: 'monthly' as const },
     { slug: 'calorias', priority: 0.8, frequency: 'monthly' as const },
@@ -88,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'gerador-textos', priority: 0.8, frequency: 'monthly' as const },
     { slug: 'gerador-logos', priority: 0.8, frequency: 'monthly' as const },
     { slug: 'gerador-personagens', priority: 0.8, frequency: 'monthly' as const },
+    { slug: 'letras-estilizadas', priority: 0.8, frequency: 'monthly' as const },
     
     // Ferramentas utilitárias
     { slug: 'comparador-precos', priority: 0.8, frequency: 'weekly' as const },

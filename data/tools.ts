@@ -20,7 +20,9 @@ import {
   Flame,
   Heart,
   Users,
-  FileText
+  FileText,
+  TrendingUp,
+  Home
 } from 'lucide-react';
 
 export const allTools = [
@@ -40,6 +42,62 @@ export const allTools = [
     color: 'from-yellow-500 to-orange-500',
     category: 'Finanças'
   },
+  {
+  name: 'Simulador de Empréstimos',
+  description: 'Simule empréstimos pessoais, calcule parcelas, juros totais e compare melhores opções. 100% gratuito!',
+  href: '/emprestimos',
+  icon: TrendingUp,
+  color: 'from-blue-500 to-cyan-500',
+  category: 'Finanças'
+},
+{
+  name: 'Simulador de Financiamentos', 
+  description: 'Calcule financiamento de veículos, imóveis e mais. Simule entrada, parcelas e total a pagar!',
+  href: '/financiamentos',
+  icon: Home, // ou Car se preferir
+  color: 'from-green-500 to-emerald-500',
+  category: 'Finanças'
+},
+{
+  name: 'Simulador de Investimentos',
+  description: 'Calcule juros compostos, projeções de renda e simule diferentes cenários de investimento!',
+  href: '/investimentos', 
+  icon: DollarSign,
+  color: 'from-purple-500 to-pink-500',
+  category: 'Finanças'
+},
+{
+  name: 'Simulador de Impostos',
+  description: 'Calcule IRPF, Simples Nacional e impostos federais. Simule deduções, compare regimes e optimize seu planejamento tributário!',
+  href: '/impostos',
+  icon: Calculator,
+  color: 'from-orange-500 to-red-500',
+  category: 'Finanças'
+},
+{
+  name: 'Calculadora de ROI Marketing',
+  description: 'Calcule retorno sobre investimento de campanhas de marketing digital, tráfego pago e redes sociais. Otimize orçamentos e maximize resultados!',
+  href: '/roi-marketing',
+  icon: TrendingUp,
+  color: 'from-indigo-500 to-purple-500',
+  category: 'Negócios & Marketing'
+},
+{
+  name: 'Calculadora de CAC',
+  description: 'Calcule o Custo de Aquisição de Cliente do seu negócio. Analise LTV:CAC, payback e compare com benchmarks do setor para growth sustentável!',
+  href: '/cac',
+  icon: Users,
+  color: 'from-teal-500 to-cyan-500',
+  category: 'Negócios & Marketing'
+},
+  {
+  name: 'Gerador de Letras Estilizadas',
+  description: 'Crie textos estilizados para redes sociais com 100+ fontes criativas. Instagram, TikTok, YouTube e mais!',
+  href: '/letras-estilizadas',
+  icon: Type,
+  color: 'from-purple-500 to-pink-500',
+  category: 'Criatividade'
+},
   {
   name: 'Gerador de Personagens',
   description: 'Crie personagens únicos para RPG, jogos, histórias e projetos criativos',
@@ -137,7 +195,7 @@ export const allTools = [
     category: 'Calculadoras'
   },
   {
-    name: 'Calculadora de %',
+    name: 'Calculadora de Porcentagem',
     description: 'Calcule porcentagens, aumentos e descontos',
     href: '/porcentagem',
     icon: Percent,
@@ -198,7 +256,7 @@ export const allTools = [
     href: '/juros',
     icon: Percent,
     color: 'from-emerald-500 to-green-500',
-    category: 'Calculadoras'
+    category: 'Finanças'
   },
   {
     name: 'Editor de Texto',
